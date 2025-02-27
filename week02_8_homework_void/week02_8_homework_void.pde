@@ -21,6 +21,7 @@ void draw(){
     }
   }
   noFill();
+  strokeWeight(5);
   draw1();
 }
 void keyPressed(){
