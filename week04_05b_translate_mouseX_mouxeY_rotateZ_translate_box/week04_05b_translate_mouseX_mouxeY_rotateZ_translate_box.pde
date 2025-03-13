@@ -1,0 +1,14 @@
+//week04_05b_translate_mouseX_mouxeY_rotateZ_translate_box
+void setup(){
+  size(400,400,P3D);
+}
+void draw(){
+  background(128);
+  //translate(width/2,height/2);//移動到畫面中心
+  //以下兩行，分別註解、排列組合觀察
+      translate(mouseX,mouseY);
+      rotateZ(radians(frameCount));//對Z軸旋轉
+      translate(0,-50);//把下端移動到中心
+      box(10,100,10);//可轉動的長條
+   
+}
