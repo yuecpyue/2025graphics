@@ -8,8 +8,8 @@ void draw(){
   background(128);
   translate(width/2,height/2+100);
   pushMatrix();
-    rotate(radians(frameCount));
     scale(10,-10,10);
+    rotateY(radians(frameCount));
     shape(gundam,0,0);
   popMatrix();
   
