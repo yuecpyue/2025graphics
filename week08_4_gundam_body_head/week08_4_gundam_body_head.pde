@@ -15,11 +15,11 @@ void draw(){
   scale(10,-10,10);
   
   pushMatrix();
-    translate(0,0,22.5);//3.放回原來的地方
+    translate(0,22.5);//3.放回原來的地方
     rotate(radians(x));//2.轉動
     //translate(x/10,y/10);//要放在x,y座標
     //println(x/10,y/10);//印出x,y座標
-    translate(0,0,-22.5);//1.把頭的中心，放在旋轉中心
+    translate(0,-22.5);//1.把頭的中心，放在旋轉中心
     shape(head,0,0);
   popMatrix();
   shape(body,0,0);
