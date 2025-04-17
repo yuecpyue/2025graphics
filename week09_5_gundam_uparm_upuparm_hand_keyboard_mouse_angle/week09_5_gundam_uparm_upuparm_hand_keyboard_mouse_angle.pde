@@ -13,7 +13,7 @@ void keyPressed(){
  if(key=='2') ID=2;
 }
 void mouseDragged(){
-   angle[ID]+=mouseX-pmouseX;//X方向的移動，可改變關節角度 
+   angle[ID]+=mouseX-pmouseX;//X方向的移動，可改變某關節角度 
 }
 void draw(){
   background(204);

@@ -17,7 +17,7 @@ void draw(){
   pushMatrix();
     translate(0,22.5);
     rotateY(radians(mouseX-200));
-    rotateX(radians(mouseX-60));
+    rotateX(radians(mouseY-60));
     translate(0,-22.5);
     shape(head,0,0);
   popMatrix();
