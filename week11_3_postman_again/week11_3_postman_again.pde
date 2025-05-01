@@ -18,7 +18,7 @@ float[] angleY=new float[10];
 int ID=0;//一開始為頭
 ArrayList<String> lines=new ArrayList<String>();
 void keyPressed(){
-  if(key=='s'){
+    if(key=='s'){
      String now=" ";//空字串
      for(int i=0;i<10;i++){
         now+=angleX[i]+" ";//後面加空格
@@ -29,8 +29,8 @@ void keyPressed(){
      lines.toArray(arr);
      saveStrings("angles.txt",arr);
      println("現在存檔:"+ now);
-   }
-   if(key=='r'){
+    }
+    if(key=='r'){
       String[] file=loadStrings("angles.txt");
       if(file!=null){
          for(int i=0;i<file.length;i++){
@@ -38,8 +38,8 @@ void keyPressed(){
            println("現在讀檔"+file[i]);
          }
       }
-   }
-   if(key=='p') playing=!playing;//按下r開始
+    }
+   if(key=='p') playing=!playing;//按下p切換
    if(key=='1') ID=1;//左邊手臂
    if(key=='2') ID=2;//左邊手肘
    if(key=='3') ID=3;//右邊手臂
