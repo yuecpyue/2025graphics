@@ -24,6 +24,7 @@ void draw(){
     vertex(400, 400, 0, 1, 1);
     vertex(0, 400, 0, 0, 1);
   endShape();
+  translate(0,0,1);
   image(movie,0,0,360,240);
   if(video.available()) video.read();
   beginShape();
