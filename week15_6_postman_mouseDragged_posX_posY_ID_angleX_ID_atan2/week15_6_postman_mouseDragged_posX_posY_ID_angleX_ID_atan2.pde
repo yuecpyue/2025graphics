@@ -1,5 +1,5 @@
 //week15_6_postman_mouseDragged_posX_posY_ID_angleX_ID_atan2
-//修改自week11_3_postman_again
+//修改自week15_5
 //重來一次，熟悉架構
 PImage postman,head,body,uparm1,hand1,uparm2,hand2,foot1,foot2;
 void setup(){//把圖加入程式裡
@@ -50,11 +50,16 @@ void keyPressed(){
    if(key=='0') ID=0;//頭
 }
 boolean playing=false;//一開始false
+float [] posX={236,195,115,290,355,220,260};
+float [] posY={230,262,265,260,255,375,375};
+float [] posAngle={90,180,180,0,0,-90,-90};
 void mouseDragged(){
    //把原本mouseX的左右移動改為IK
    //從頭的地方找到位置translate(236, 230);
-   float dx=mouseX-236,dy=mouseY-230;
-   angleX[0]=degrees(atan2(dy,dx))+90;//頭的角度
+   //float dx=mouseX-236,dy=mouseY-230;
+   //angleX[0]=degrees(atan2(dy,dx))+90;//頭的角度
+   float dx=mouseX-posX[ID],dy=mouseY-posY[ID];
+   angleX[ID]=degrees(atan2(dy,dx))+posAngle[ID];
    //angleX[ID]+=mouseX-pmouseX; 
    //angleY[ID]+=mouseY-pmouseY; //<-多了這行
 }
@@ -124,5 +129,3 @@ void draw(){
     popMatrix();
   popMatrix();
 }
-float [] posX={236,195,115,290,355,220,260};
-float [] posY={230,262,265,260,255,375,375};
